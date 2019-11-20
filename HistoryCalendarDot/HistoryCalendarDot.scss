@@ -1,0 +1,68 @@
+@import "~mixins.scss";
+
+.history-calendar-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  .history-calendar-dot__circle {
+    flex: 0 0 auto;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 11px;
+    height: 11px;
+
+    background: $clrMidGrey;
+
+    &.disabled {
+      background: $clrMidGrey;
+    }
+
+    &.active {
+      background: $clrGreen;
+    }
+
+    &.passive {
+      background: $clrHistoryDotPassiveBg;
+    }
+
+    &.today {
+      background: $clrBtnHover;
+    }
+  }
+}
+
+.tippy-tooltip.calendar-dot-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2px;
+  padding: 6px;
+  min-width: 32px;
+  min-height: 25px;
+  background-color: $clrWhite;
+  color: $clrDarkPurple;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+
+  .tippy-content {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 11px;
+  }
+}
+
+.tippy-tooltip.calendar-dot-theme[data-animatefill] {
+  background-color: $clrWhite;
+}
+
+.tippy-tooltip.calendar-dot-theme .tippy-backdrop {
+  background-color: $clrWhite;
+}

@@ -1,0 +1,16 @@
+.country-flag {
+  width: 17px;
+  height: 12px;
+  object-fit: cover;
+  object-position: center;
+
+  &.medium {
+    width: 30px;
+    height: 24px;
+  }
+
+  &.large {
+    width: 68px;
+    height: 48px;
+  }
+}

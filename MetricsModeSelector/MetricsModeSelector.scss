@@ -1,0 +1,75 @@
+@import "~mixins.scss";
+
+.metrics-mode-selector {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid transparentize($clrLightPurple, .5);
+  border-radius: 100px;
+  padding: 0;
+  overflow: hidden;
+  width: min-content;
+  height: 30px;
+
+  .metrics-mode-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    border-right: 1px solid transparentize($clrLightPurple, .5);
+    padding: 6px;
+    width: 92px;
+    height: 30px;
+
+    background: $clrLightGrey;
+    cursor: pointer;
+    outline: none !important;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    & * {
+      transition: .3s;
+    }
+
+    .metrics-mode-btn__icon {
+      margin: 0 6px 0 0;
+
+      .fill-svg {
+        fill: $clrDarkPurple;
+      }
+    }
+
+    .metrics-mode-btn__text {
+      font-size: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      color: $clrDarkPurple;
+    }
+
+    &:hover, &:focus {
+      background: $clrWhite;
+    }
+
+    &:active, &.active {
+      background: $clrWhite;
+
+      .metrics-mode-btn__icon {
+        .fill-svg {
+          fill: $clrMidPurple;
+        }
+      }
+
+      .metrics-mode-btn__text {
+        font-weight: bold;
+        color: $clrMidPurple;
+      }
+    }
+  }
+}

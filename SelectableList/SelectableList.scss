@@ -1,0 +1,109 @@
+@import "~mixins.scss";
+
+.selectable-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  height: auto;
+
+  .selectable-list__search {
+    margin-bottom: 18px !important;
+  }
+
+  .selectable-list__items {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0;
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: auto;
+
+    .selectable-list__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 6px;
+      border: 1px solid $clrLightPurple;
+      border-radius: 6px;
+      padding: 5px 12px;
+      height: 30px;
+
+      background: $clrWhite;
+      outline: none !important;
+      cursor: pointer;
+      transition: .3s;
+
+      &.active, &:active {
+        border: 1px solid $clrMidPurple;
+      }
+
+      &:hover, &:focus {
+        border: 1px solid $clrBtnHover;
+      }
+
+      .selectable-list__item__title {
+        flex: 1 1 auto;
+        margin: 0 6px 0 0;
+        border: none;
+        padding: 0;
+
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 1em;
+        color: $clrDarkPurple;
+      }
+
+      .selectable-list__item__radio {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        border: 1px solid $clrMidGrey;
+        border-radius: 50%;
+        padding: 0;
+        width: 14px;
+        height: 14px;
+        background: $clrWhite;
+
+        &:after {
+          content: ' ';
+          display: block;
+          flex: 0 0 auto;
+          margin: 0;
+          border: none;
+          padding: 0;
+          width: 8px;
+          height: 8px;
+          background: $clrBtnHover;
+          border-radius: 50%;
+          opacity: 0;
+          transition: .3s;
+        }
+
+        &.active {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .selectable-list__radio-img {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}

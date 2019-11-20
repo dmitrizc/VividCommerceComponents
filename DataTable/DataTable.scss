@@ -1,0 +1,142 @@
+@import "~mixins.scss";
+
+.data-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  margin: 0;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+
+  .ReactTable {
+    border: none;
+
+    .rt-thead {
+      height: 42px !important;
+
+      &.-header {
+        box-shadow: none;
+      }
+
+      .rt-tr {
+        .rt-th, .rt-td {
+          border: none;
+
+          font-family: 'Open Sans', sans-serif;
+          font-size: 12px;
+          font-weight: normal;
+          color: transparentize($clrDarkPurple, .4);
+
+          &:first-child {
+            .rt-resizable-header-content {
+              justify-content: flex-start;
+            }
+          }
+
+          .rt-resizable-header-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end !important;
+            justify-content: center;
+            height: 100%;
+          }
+
+          .sort-icon {
+            margin-left: .5em;
+          }
+
+          &.-sort-asc {
+            box-shadow: none !important;
+
+            .desc {
+              // visibility: hidden;
+              fill: #e5e5e5;
+            }
+
+            .asc {
+              // visibility: visible;
+              fill: #4b427f;
+            }
+          }
+
+          &.-sort-desc {
+            box-shadow: none !important;
+
+            .desc {
+              // visibility: visible;
+              fill: #4b427f;
+            }
+
+            .asc {
+              // visibility: hidden;
+              fill: #e5e5e5;
+            }
+          }
+        }
+      }
+    }
+
+    .rt-tbody {
+      .rt-tr-group {
+        border: none;
+        height: 60px;
+
+        .rt-tr {
+          cursor: pointer;
+
+          &.-odd {
+            background: $clrMildWhite;
+          }
+
+          &.-even {
+          }
+
+          .rt-th, .rt-td {
+            border: none;
+          }
+
+          .rt-td {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0 6px;
+
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.1em;
+            color: $clrDarkPurple;
+
+            &:first-child {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    .rt-resizer {
+      width: 8px;
+      right: -4px;
+    }
+
+    .rt-noData {
+      display: none !important;
+    }
+  }
+
+  .empty-cell-icon {
+    margin: auto;
+  }
+
+
+  &.no-sort {
+    .sort-icon {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "~mixins.scss";
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  .toggle-button-ctrl {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    border: none;
+    border-radius: 100px;
+    padding: 2px;
+    width: 38px;
+    height: 20px;
+    background: $clrMidGrey;
+    transition: .5s;
+
+    outline: none !important;
+    cursor: pointer;
+
+    .toggle-button-thumb {
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      display: block;
+      margin: 0;
+      border: none;
+      border-radius: 100px;
+      width: 16px;
+      height: 16px;
+      background: $clrWhite;
+
+      transition: .5s;
+    }
+  }
+
+  &.active {
+    .toggle-button-ctrl {
+      background: $clrHoverBlue;
+
+      .toggle-button-thumb {
+        left: 20px;
+      }
+    }
+  }
+}

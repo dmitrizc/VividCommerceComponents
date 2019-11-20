@@ -1,0 +1,14 @@
+@import "~mixins.scss";
+
+.product-summary-table--dashboard {
+  .table-header-price-difference {
+    position: relative;
+
+    .table-header-extra-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+  }
+}

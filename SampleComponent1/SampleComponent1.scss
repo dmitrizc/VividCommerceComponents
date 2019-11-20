@@ -1,0 +1,32 @@
+@import '~mixins.scss';
+
+.sample-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: gold;
+  color: #0c0e10;
+
+  @include media-breakpoint-down(lg) {
+    background: skyblue;
+    color: orange;
+  }
+
+  @include media-breakpoint-down(md) {
+    background: darkgoldenrod;
+    color: darkcyan;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background: lightgreen;
+    color: coral;
+  }
+
+  @include media-breakpoint-down(xs) {
+    background: mediumpurple;
+    color: cornflowerblue;
+  }
+}

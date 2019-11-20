@@ -1,0 +1,59 @@
+@import "~mixins.scss";
+
+.history-calendar {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+
+  .DayPicker {
+    .DayPicker-wrapper {
+      margin: 0;
+      border: none;
+      padding: 0;
+
+      .DayPicker-Months {
+        .DayPicker-Month {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          margin: 0;
+          border: none;
+          padding: 13px;
+
+          .DayPicker-Caption {
+            padding-left: 8px;
+            width: 100%;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 11px;
+            font-family: 'Open Sans', sans-serif;
+            color: #1e135f;
+          }
+
+          .DayPicker-Weekdays {
+            display: none;
+          }
+
+          .DayPicker-Body {
+            .DayPicker-Week {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+
+              .DayPicker-Day {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                Width: 26px;
+                Height: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "~mixins.scss";
+
+.radio-select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid transparentize($clrLightPurple, 0.5);
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+
+  .radio-select-item-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    border-right: 1px solid transparentize($clrLightPurple, 0.5);
+    padding: 6px;
+    min-width: 25px;
+    min-height: 18px;
+
+    background: $clrWhite;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.1em;
+    color: $clrDarkPurple;
+    transition: .3s;
+
+    outline: none !important;
+    cursor: pointer;
+
+    &.active {
+      background: $clrBtnHover;
+      color: $clrWhite;
+    }
+
+    &:last-child {
+      border-right: none !important;
+    }
+  }
+}

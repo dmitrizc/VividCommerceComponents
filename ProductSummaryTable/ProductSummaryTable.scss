@@ -1,0 +1,55 @@
+@import "~mixins.scss";
+
+.product-summary-table {
+  .table-header-price-difference {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .table-header-extra-label {
+      position: absolute;
+      left: calc(50% + 4px);
+      top: -17px;
+      transform: translateX(-50%);
+      width: 120px;
+      text-align: left;
+    }
+
+    .price-difference-dropdown {
+      width: 120px;
+    }
+  }
+
+  .rt-tbody {
+    .rt-tr {
+      .rt-td {
+        &:first-child {
+          padding-left: 0 !important;
+
+          .product-summary-table__details {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: stretch;
+            margin: 0;
+            border: none;
+            border-left: 4px solid transparent;
+            padding: 0 0 0 6px;
+            width: 100%;
+            height: 100%;
+
+            &.active {
+              border-left: 4px solid $clrMidPurple;
+
+              .product-details-1__title {
+                font-weight: bold !important;
+                color: $clrMidPurple !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

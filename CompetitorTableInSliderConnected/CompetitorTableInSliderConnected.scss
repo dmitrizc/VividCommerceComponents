@@ -1,0 +1,44 @@
+@import "~mixins.scss";
+
+.competitor-summary-table--slider--connected {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: flex-start;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  min-height: 200px;
+
+  .loading-indicator {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .table-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .summary-type-dropdown {
+    width: 190px;
+  }
+
+  .pagination-select {
+    margin-left: 20px;
+  }
+}

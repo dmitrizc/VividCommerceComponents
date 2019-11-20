@@ -1,0 +1,71 @@
+@import "~mixins.scss";
+
+$slideWidth: 450px;
+
+.right-slides-in-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: $zindex-modal;
+}
+
+.right-slides-in {
+  flex-shrink: 0;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: $slideWidth;
+  height: 100%;
+
+  background: $clrWhite;
+  box-shadow: $boxShadowActive;
+  transform: translateX(#{$slideWidth + 20});
+  transition: .3s;
+  pointer-events: all;
+
+  &.open {
+    transform: none !important;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+
+    .fill-svg {
+      fill: $clrDarkPurple;
+    }
+  }
+
+  .section-wrapper {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid $clrMidGrey;
+    padding: 18px;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+}

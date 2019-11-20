@@ -1,0 +1,15 @@
+@import "~mixins.scss";
+
+.competitor-summary-table--dashboard {
+  .competitor-summary-table__seller-name {
+    width: 100%;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.1em;
+    color: $clrDarkPurple;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
